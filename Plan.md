@@ -143,8 +143,8 @@
 
 ### Документация:
 
-- [Чек-лист;]()
-- [Тест-кейсы;]()
+- [Чек-лист;](https://docs.google.com/spreadsheets/d/1KymxkIXm-wzX-Xw5MUVbSpl-9s8YcZPgaE3VCoTWl8M/edit?usp=sharing)
+- [Тест-кейсы;](https://docs.google.com/spreadsheets/d/1Sgf9nE7QEXgshpobzQ0zoPE4z5XnbtrFXjmg9Wx2fi8/edit?usp=sharing)
 - [Баг репорты;]()
 - [Отчёт о тестировании;]()
 
