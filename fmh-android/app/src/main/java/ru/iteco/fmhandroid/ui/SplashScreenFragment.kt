@@ -13,6 +13,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
+import ru.iteco.fmhandroid.EspressoIdlingResources
 import ru.iteco.fmhandroid.R
 import ru.iteco.fmhandroid.api.UserApi
 import ru.iteco.fmhandroid.auth.AppAuth
@@ -135,6 +136,7 @@ class SplashScreenFragment : Fragment(R.layout.fragment_splash_screen) {
     private val splashscreenImage = splashscreenImages.random()
 
     override fun onCreate(savedInstanceState: Bundle?) {
+//        EspressoIdlingResources.increment();
         super.onCreate(savedInstanceState)
 
         onFullScreen()
@@ -150,6 +152,7 @@ class SplashScreenFragment : Fragment(R.layout.fragment_splash_screen) {
         lifecycleScope.launch {
             authViewModel.authorizedEvent.collectLatest {
                 findNavController().navigate(R.id.action_splashScreenFragment_to_mainFragment)
+//                EspressoIdlingResources.decrement();
             }
         }
     }
@@ -170,6 +173,7 @@ class SplashScreenFragment : Fragment(R.layout.fragment_splash_screen) {
                 binding.splashScreenCircularProgressIndicator.trackColor =
                     ContextCompat.getColor(requireContext(), R.color.splash_screen_title_1)
             }
+
             R.drawable.background_splash_screen_title_2 -> {
                 binding.splashScreenCircularProgressIndicator.setIndicatorColor(
                     ContextCompat.getColor(
@@ -180,6 +184,7 @@ class SplashScreenFragment : Fragment(R.layout.fragment_splash_screen) {
                 binding.splashScreenCircularProgressIndicator.trackColor =
                     ContextCompat.getColor(requireContext(), R.color.splash_screen_title_2)
             }
+
             R.drawable.background_splash_screen_title_3 -> {
                 binding.splashScreenCircularProgressIndicator.setIndicatorColor(
                     ContextCompat.getColor(
@@ -190,6 +195,7 @@ class SplashScreenFragment : Fragment(R.layout.fragment_splash_screen) {
                 binding.splashScreenCircularProgressIndicator.trackColor =
                     ContextCompat.getColor(requireContext(), R.color.splash_screen_title_3)
             }
+
             R.drawable.background_splash_screen_title_4 -> {
                 binding.splashScreenCircularProgressIndicator.setIndicatorColor(
                     ContextCompat.getColor(
@@ -200,6 +206,7 @@ class SplashScreenFragment : Fragment(R.layout.fragment_splash_screen) {
                 binding.splashScreenCircularProgressIndicator.trackColor =
                     ContextCompat.getColor(requireContext(), R.color.splash_screen_title_4)
             }
+
             R.drawable.background_splash_screen_title_5 -> {
                 binding.splashScreenCircularProgressIndicator.setIndicatorColor(
                     ContextCompat.getColor(
@@ -210,6 +217,7 @@ class SplashScreenFragment : Fragment(R.layout.fragment_splash_screen) {
                 binding.splashScreenCircularProgressIndicator.trackColor =
                     ContextCompat.getColor(requireContext(), R.color.splash_screen_title_5)
             }
+
             R.drawable.background_splash_screen_title_6 -> {
                 binding.splashScreenCircularProgressIndicator.setIndicatorColor(
                     ContextCompat.getColor(

@@ -11,6 +11,7 @@ import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
+import ru.iteco.fmhandroid.EspressoIdlingResources
 import ru.iteco.fmhandroid.R
 import ru.iteco.fmhandroid.databinding.FragmentAuthBinding
 import ru.iteco.fmhandroid.viewmodel.AuthViewModel
@@ -68,6 +69,7 @@ class AuthFragment : Fragment(R.layout.fragment_auth) {
             ourMissionImageButton.visibility = View.GONE
         }
 
+
         binding.enterButton.setOnClickListener {
             if (binding.loginTextInputLayout.editText?.text.isNullOrBlank() || binding.passwordTextInputLayout.editText?.text.isNullOrBlank()) {
                 Toast.makeText(
@@ -82,7 +84,6 @@ class AuthFragment : Fragment(R.layout.fragment_auth) {
                 )
             }
         }
-
         requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner) {
             activity?.finishAffinity()
         }
